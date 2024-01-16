@@ -2,7 +2,7 @@
 
 #include <array>
 
-template<size_t N>
+template<std::size_t N>
 class Permutation {
 public:
     Permutation();

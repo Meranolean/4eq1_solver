@@ -1,5 +1,6 @@
 #include <iostream>
 #include <memory>
+#include <cmath>
 #include <string>
 #include <vector>
 #include <stack>
@@ -9,7 +10,7 @@
 #include "notation/operations.h"
 #include "permutation/permutation.h"
 
-size_t solutions = 1;
+std::size_t solutions = 1;
 
 std::string MakeStrOperation(const std::vector<float>& nums, const std::vector<OPERATION_TYPE>& ops) {
     std::string output;
@@ -63,7 +64,7 @@ std::vector<NotationPtr> MakePolandNotation(const std::string& str) {
     std::vector<NotationPtr> output;
     std::stack<NotationPtr> stack;
 
-    for (size_t i = 0; i < str.size(); ++i) {
+    for (std::size_t i = 0; i < str.size(); ++i) {
         char symbol = str[i];
         if (symbol == ' ') {
             continue;
